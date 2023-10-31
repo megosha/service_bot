@@ -1,13 +1,13 @@
 import os
-# from pathlib import Path
+from pathlib import Path
 
 import telebot
 
 from speakers import SPEAKERS
 
 
-# BASE_DIR = Path(__file__).resolve().parent
-# speaker_file = str(BASE_DIR / 'files' / 'speaker.txt')
+BASE_DIR = Path(__file__).resolve().parent
+speaker_file = str(BASE_DIR / 'files' / 'speaker.txt')
 
 
 def valid_user_by_pk(pk:str):
@@ -32,7 +32,7 @@ def render_speakers():
 
 
 def save_speaker(speaker:str):
-    with open("speaker.txt", "w") as file:
+    with open(speaker_file, "w") as file:
         file.write(speaker)
 
 
@@ -46,14 +46,14 @@ def get_speaker_by_pk(pk):
 
 
 def read_speaker():
-    if os.path.isfile("speaker.txt"):
-        with open("speaker.txt", "r") as file:
+    if os.path.isfile(speaker_file):
+        with open(speaker_file, "r") as file:
             pk = file.read()
             return get_speaker_by_pk(pk)
     return None, None
 
 
 def clear_speaker():
-    if os.path.isfile("speaker.txt"):
-        os.remove("speaker.txt")
+    if os.path.isfile(speaker_file):
+        os.remove(speaker_file)
 
