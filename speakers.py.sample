@@ -1,0 +1,7 @@
+SPEAKERS = [{"1": {"t_id": 1234, "name":"John"}},
+  {"2": {"t_id": 5678, "name":"Doe"}},
+]
+
+PASTOR = 9012
+
+MEDIA = 3456

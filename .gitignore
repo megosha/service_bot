@@ -1,1 +1,5 @@
 /.env
+/speaker.txt
+/speakers.py
+/__pycache__
+/.idea
