@@ -43,7 +43,7 @@ def query_handler(call):
         bot.edit_message_reply_markup(chat_id=call.message.chat.id, message_id=call.message.id, reply_markup=None)
 
 # если ответ - тема проповеди, переслать проповедника media
-@bot.message_handler(content_types=['text',])
+@bot.message_handler(content_types=['text','photo',])
 def message_reply(message):
     if service.valid_user_by_tid(message.chat.id):
         try:
