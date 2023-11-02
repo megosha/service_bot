@@ -1,5 +1,5 @@
 from main import bot
-from service import read_speaker, valid_user_by_tid, clear_speaker
+from service import read_speaker, valid_user_by_tid
 from speakers import MEDIA
 
 
@@ -10,6 +10,5 @@ if valid_user_by_tid(tid):
                      '\n ⚠️Не пишите ничего, кроме темы в ответе ⚠️', )
 else:
     bot.send_message(MEDIA, f'Проповедник неизвестен')
-    clear_speaker()
 
 

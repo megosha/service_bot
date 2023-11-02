@@ -53,8 +53,6 @@ def message_reply(message):
                                     f'Не забудьте удалить файл с проповедником после проверки.')
         else:
             bot.reply_to(message, f'✅ Ваше сообщение успешно передано')
-            service.clear_speaker()
-
 
 
 
