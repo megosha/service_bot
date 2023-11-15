@@ -15,7 +15,7 @@ bot = telebot.TeleBot(BOT_TOKEN)
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
-    if service.valid_user_by_tid(message.chat.id):
+    if service.valid_user_by_tid(message.chat.id) or message.chat.id == MEDIA:
         msg = "Бот для опроса названия проповеди успешно запущен!👋" \
               "\n\n ⚠️Внимание! Когда бот спросит у вас название," \
               " не пишите ничего, кроме темы проповеди в ответе ⚠️"
