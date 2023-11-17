@@ -57,3 +57,5 @@ def clear_speaker():
     if os.path.isfile(speaker_file):
         os.remove(speaker_file)
 
+def check_speacker():
+    return os.path.isfile(speaker_file)
